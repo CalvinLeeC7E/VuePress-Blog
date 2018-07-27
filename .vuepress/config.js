@@ -5,7 +5,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: 'CalvinLee',
-      description: '开发手册'
+      description: '博客'
     }
   },
   head: [],

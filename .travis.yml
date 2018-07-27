@@ -9,7 +9,6 @@ script:
 
 after_script:
   - cd ./dist
-  - echo 'fs-calvin.com' > CNAME
   - git init
   - git config user.name "llb421270473"
   - git config user.email "421270473@qq.com"
