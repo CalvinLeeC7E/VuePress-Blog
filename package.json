@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "calvin lee blog",
+  "main": "index.js",
+  "scripts": {
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [
+    "calvin",
+    "blog",
+    "mysql",
+    "redis",
+    "nginx",
+    "mongo",
+    "mongodb",
+    "js",
+    "javascript",
+    "vue",
+    "webpack",
+    "frontend",
+    "backend"
+  ],
+  "author": "calvinlee",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^0.12.0"
+  }
+}
