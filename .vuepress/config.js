@@ -1,5 +1,5 @@
 module.exports = {
-  dest: 'doc-publish',
+  dest: 'dist',
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -12,7 +12,7 @@ module.exports = {
   themeConfig: {
     repo: 'llb421270473/Blog',
     editLinks: true,
-    docsDir: 'public',
+    docsDir: './',
     serviceWorker: {
       updatePopup: true
     },
