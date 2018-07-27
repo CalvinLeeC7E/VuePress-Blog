@@ -44,7 +44,9 @@ function genSidebarConfig (title) {
       collapsable: false,
       children: [
         '',
-        'DOM备忘录'
+        'DOM',
+        'Jenkins',
+        'mvvm',
       ]
     }
   ]

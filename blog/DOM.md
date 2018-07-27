@@ -1,38 +1,51 @@
-# DOM备忘录
-##### document.anchors
+# DOM
+
+### document
+------
+* document.anchors
 获取当前页面所有锚
 
-##### document.forms 
+* document.forms
 获取当前页面所有表单
 
-##### document.getElementById 
+* document.getElementById
 返回第一个匹配的元素
 
-##### document.images 
+* document.images
 获取当前页面所有图片
 
-##### event.keycode
+### event
+------
+* event.keycode
 对应键盘的按键code
 
-##### event.button
+* event.button
 鼠标点击的哪个按键，0=>左键，1=>中键，2=>右键
 
-##### event.clientX | clientY
+* event.clientX | clientY
 事件发生的坐标
 
-##### event.screenX | screenY
+* event.screenX | screenY
 相对屏幕的X或Y的值
 
-##### event.shiftKey
+* event.shiftKey
 点击shift返回1，否则返回0
 
-##### IE环境event.srcElement等于FireFox的event.target
+> IE环境event.srcElement等于FireFox的event.target
 
-##### nodeType
-1：元素；2：属性；3：文本；8：注释；9：文档
+### nodeType
+------
+* 1：元素
+* 2：属性
+* 3：文本
+* 8：注释
+* 9：文档
 
-##### from
+### form
+------
+``` js{4}
 var f = document.getElementById('x')
+```
 * f.action // 获取action的值
 * f.action = 'some action' // 设置action的值
 * f.method // 获取请求方法
@@ -40,20 +53,32 @@ var f = document.getElementById('x')
 * f.elements // 获取此form对象下的所有input元素
 * f.onsubmit = function(){ return false | true} // 返回false此表单不会提交
 
-##### button
-* disable = true // 禁用
-* disable = false | null // 启用
+### button
+-------
+```
+disable = true // 禁用
+disable = false | null // 启用
+```
 
-##### checkbox
-* checked = true // 选中
-* checked = false // 取消
+### checkbox
+-------
+```
+checked = true // 选中
+checked = false // 取消
+```
 
-##### 选中文本内容
+### 选中文本内容
+---
+``` js{4}
 var text = document.getElementById('x')
 text.select() // 选中文本域内容
+```
 
-##### 下拉列表
+### 下拉列表
+------
+``` js{4}
 var selectDom = document.getElementById('x')
+```
 * selectDom.selectedIndex // 选中的索引
 * selectDom.options // 列出options
 * selectDom.length // 有几个可选项
@@ -63,8 +88,11 @@ var selectDom = document.getElementById('x')
 * 通过selectDom.remove(index)，移除对应的option
 * 选中options，设置属性selected="selected"
 
-##### Table
+### Table
+------
+``` js{4}
 var t = document.getElementById('x')
+```
 * cellpadding	单元边沿与其内容之间的空白
 * cellspacing 规定单元格之间的空白
 * frame 规定外边框哪部分可见（void，above，below，hsides，lhs，rhs，vsides，box，border）
@@ -73,7 +101,8 @@ var t = document.getElementById('x')
 * insertRow(index)返回的row对象再执行，insertCell(index)返回cell对象
 * td标签使用colspan用来指定单元格横向跨越的列数，rowspan用来指定单元格纵向跨越的行数
 
-##### AccessKey元素快捷访问
+### AccessKey元素快捷访问
+------
 * windows
 ```
 alt + key
@@ -84,7 +113,8 @@ FireFox shift + alt + key
 control + option + key
 ```
 
-##### frameset、frame、iframe
+### frameset、frame、iframe
+------
 * frameset设置rows="30%，30%，30%"，每一行占屏幕百分比高度
 * frameset设置cols="30%，30%，30%"，每一行占屏幕百分比宽度
 * frame不能脱离frameset使用，但是iframe可以脱离文档使用
@@ -93,12 +123,14 @@ control + option + key
 * iframe单独使用时有无body标签都可以
 * 通过src属性来设置框架源
 
-##### window
+### window
+------
 * window.top 顶层窗口，可使用window.top != window.self来判断当前窗口是否是顶层窗口
 * window.open(URL,name,specs,replace) 打开窗口，name可填写target值
 * window.screen.availWidth | availHeight 屏幕可用宽度或高度
 
-##### navigator
+### navigator
+------
 * appCodeName	浏览器的代码名
 * appName	浏览器的名称
 * appVersion	浏览器的平台和版本信息
@@ -106,7 +138,8 @@ control + option + key
 * platform	运行浏览器的操作系统平台
 * userAgent	由客户机发送服务器的user-agent 头部的值
 
-##### location
+### location
+------
 * hash	URL的锚部分
 * host	URL的主机名和端口
 * hostname	URL的主机名
